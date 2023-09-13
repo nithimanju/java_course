@@ -1,0 +1,19 @@
+<HTML xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Owner-ADD-Room</title>
+    </head>
+    <body>
+
+        <h2>Owner-ADD-Room</h2>
+
+        <div>
+            <form th:action="@{/owner/room/addRoom1}" method="POST" th:object="${RoomOBJ}" class="addRoomClass">
+                <input th:field="*{floorNo}" type="text" >
+                <input th:field="*{roomNo}" type="text" >
+                <input th:field="*{windowNo}" type="text" >
+                <input type="submit" >
+            </form>
+        </div>
+    </body>
+</HTML>

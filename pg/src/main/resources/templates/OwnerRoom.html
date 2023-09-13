@@ -1,0 +1,20 @@
+<HTML xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Owner-Room</title>
+    </head>
+    <body th:each="owner : ${owner}">
+
+        <h2>Owner-Room</h2>
+        <div>
+            <p th:text="'Hello, '+${owner.getName()}"></p>
+        </div>
+
+        <div>
+            <button>Allocate-Room</button>
+            <button>Deallocate-Room</button>
+            <button>Print-Room</button>
+            <button>Add-Room</button>
+        </div>
+    </body>
+</HTML>
