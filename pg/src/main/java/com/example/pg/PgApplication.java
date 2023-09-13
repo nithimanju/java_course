@@ -15,6 +15,7 @@ public class PgApplication {
 	private static List<Room> roomList = new ArrayList<Room>();
     public static Map<Person,Integer> accountMap = new HashMap<Person, Integer>();
 	public static List<Instrument> repairList = new ArrayList<Instrument>();
+	private static List<Person> personList = new ArrayList<Person>();
 	private static Owner own;
 	public static void main(String[] args) {
 		SpringApplication.run(PgApplication.class, args);	
@@ -69,4 +70,13 @@ public class PgApplication {
 	public static Owner getOwner(){
 		return own;
 	}
+
+	public static List<Person> getPersonList() {
+		return personList;
+	}
+
+	public static void setPersonList(Person p) {
+		personList.add(p);
+	}
+
 }

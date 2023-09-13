@@ -50,12 +50,35 @@ public class OwnerController {
   }
 
   @PostMapping("/owner/room/addRoom1")
-  public String processAddRoom(@ModelAttribute RoomOBJ roomobj, Model model){
+  public void processAddRoom(@ModelAttribute RoomOBJ roomobj, Model model){
     int roomNo = roomobj.getRoomNo();
     int floorNo = roomobj.getRoomNo();
     int windowNo = roomobj.getWindowNo();
+    PgApplication.addRoom(null, floorNo, roomNo, windowNo);
     System.out.println(roomNo+" "+floorNo+" "+windowNo);
-    return "";
+    //return "";
+  }
+
+  @GetMapping("/owner/addPerson")
+  public String addPerson(Model model){
+    model.addAttribute("PersonOBJ", new PersonOBJ());
+    return "OwnerAddPerson";
+  }
+
+
+  @PostMapping("/owner/addPerson1")
+  public String newPerson(@ModelAttribute PersonOBJ personobj, Model model) {
+    String name = personobj.getName();
+    String dob = personobj.getDob();
+    String adhaarNo = personobj.getAdhaarNo();
+    String phNo = personobj.getPhNo();
+    String email = personobj.getEmail();
+    String profession = personobj.getProfession();
+    Person p = new Guest(name, dob, adhaarNo, phNo, email, profession);
+    PgApplication.setPersonList(p);
+    System.out.println(((Guest)p).getAdhaarNo()+" ");
+    model.addAttribute("Guest", ((Guest)p));
+    return "OwnerShowPerson";
   }
 
   @GetMapping("/owner/room/allocateRoom")

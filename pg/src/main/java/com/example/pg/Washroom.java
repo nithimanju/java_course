@@ -15,6 +15,7 @@ public class Washroom extends Room {
     }
 
     public Washroom(List<Instrument> instrumentList, int floorNo, int roomNo){
+        super(floorNo, roomNo, roomNo);
         this.instrumentList = instrumentList;
         this.floorNo = floorNo;
         this.roomNo = roomNo;

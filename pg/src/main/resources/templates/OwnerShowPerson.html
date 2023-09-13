@@ -1,0 +1,19 @@
+<HTML xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>User-Info</title>
+    </head>
+    <body">
+
+        <h2>User-Info</h2>
+        <div>
+            <p th:text="'Hello, '+${Guest.getName()}"></p>
+        </div>
+
+        <p th:text = "'Name: ' + ${Guest.getName()}"></p>
+        <p th:text = "'Date of Birth: ' + ${Guest.getDob()}"></p>
+        <p th:text = "'AdhaarNo: ' + ${Guest.getAdhaarNo()}"></p>
+        <p th:text = "'PhoneNo: ' + ${Guest.getPhNo()}"></p>
+        <p th:text = "'Email: ' + ${Guest.getEmail()}"></p>
+    </body>
+</HTML>
