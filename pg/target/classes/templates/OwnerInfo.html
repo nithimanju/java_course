@@ -1,0 +1,19 @@
+<HTML xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Owner-Info</title>
+    </head>
+    <body th:each="owner : ${owner}">
+
+        <h2>Owner-Info</h2>
+        <div>
+            <p th:text="'Hello, '+${owner.getName()}"></p>
+        </div>
+
+        <p th:text = "'Name: ' + ${owner.getName()}"></p>
+        <p th:text = "'Date of Birth: ' + ${owner.getDob()}"></p>
+        <p th:text = "'AdhaarNo: ' + ${owner.getAdhaarNo()}"></p>
+        <p th:text = "'PhoneNo: ' + ${owner.getPhNo()}"></p>
+        <p th:text = "'Email: ' + ${owner.getEmail()}"></p>
+    </body>
+</HTML>
