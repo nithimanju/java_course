@@ -1,0 +1,18 @@
+<HTML xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+
+        <h2>Owner</h2>
+        <div>
+            <p th:text="'Hello, '+${owner.getName()}"></p>
+        </div>
+
+        <button>Owner</button>
+        <button>Cheif</button>
+        <button>Guest</button>
+        <button>Technician</button>
+    </body>
+</HTML>
