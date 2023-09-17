@@ -1,6 +1,8 @@
-package com.example.pg;
+package com.example.pg.person;
 
 import java.util.HashMap;
+
+import com.example.pg.room.Room;
 
 public interface OwnerInterface {
     public boolean allocateRoom(Person person, Room room);

@@ -1,8 +1,14 @@
-package com.example.pg;
+package com.example.pg.person;
 
 import java.util.HashMap;
 import java.util.List;
 
+import com.example.pg.instrument.Instrument;
+import com.example.pg.instrument.InstrumentInterface;
+
+import lombok.Getter;
+
+@Getter
 public class Guest extends Person implements GuestInerface, InstrumentInterface {
 
     private final String name;
@@ -20,30 +26,6 @@ public class Guest extends Person implements GuestInerface, InstrumentInterface 
         this.phNo = phNo;
         this.email = email;
         this.profession = profession;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getDob() {
-        return dob;
-    }
-
-    public String getAdhaarNo() {
-        return adhaarNo;
-    }
-
-    public String getPhNo() {
-        return phNo;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getProfession() {
-        return String.valueOf(profession);
     }
 
     @Override

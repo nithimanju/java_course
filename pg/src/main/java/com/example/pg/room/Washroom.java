@@ -1,9 +1,15 @@
-package com.example.pg;
+package com.example.pg.room;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import com.example.pg.instrument.Instrument;
+import com.example.pg.person.Person;
+
+import lombok.Getter;
+
+@Getter
 public class Washroom extends Room {
 
     private List<Instrument> instrumentList = new ArrayList<Instrument>();

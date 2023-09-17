@@ -1,4 +1,4 @@
-package com.example.pg;
+package com.example.pg.instrument;
 
 import java.util.List;
 

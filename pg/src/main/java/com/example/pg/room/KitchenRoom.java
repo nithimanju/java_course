@@ -1,9 +1,16 @@
-package com.example.pg;
+package com.example.pg.room;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import com.example.pg.person.ChefInterface;
+import com.example.pg.instrument.Instrument;
+import com.example.pg.person.Person;
+
+import lombok.Getter;
+
+@Getter
 public class KitchenRoom extends Room {
 
     private List<Person> personList = new ArrayList<Person>();
@@ -23,27 +30,6 @@ public class KitchenRoom extends Room {
         this.floorNo = floorNo;
         this.roomNo = roomNo;
         this.windowNo = windowNo;
-    }
-
-
-    public List<Person> getPersonList() {
-        return personList;
-    }
-
-    public List<Instrument> getInstrumentList() {
-        return instrumentList;
-    }
-
-    public int getFloorNo() {
-        return floorNo;
-    }
-
-    public int getRoomNo() {
-        return roomNo;
-    }
-
-    public int getWindowNo() {
-        return windowNo;
     }
 
     public boolean addPerson(Person p){

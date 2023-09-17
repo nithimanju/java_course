@@ -1,6 +1,5 @@
-package com.example.pg;
+package com.example.pg.controller;
 
-import java.util.Arrays;
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Controller;
@@ -8,6 +7,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import com.example.pg.PgApplication;
+import com.example.pg.person.Guest;
+import com.example.pg.person.Owner;
+import com.example.pg.person.Person;
+import com.example.pg.person.PersonOBJ;
+import com.example.pg.room.Room;
+import com.example.pg.room.RoomOBJ;
 
 @Controller
 public class OwnerController {
