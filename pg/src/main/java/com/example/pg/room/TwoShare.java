@@ -1,9 +1,15 @@
-package com.example.pg;
+package com.example.pg.room;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import com.example.pg.person.GuestInerface;
+import com.example.pg.person.Person;
+
+import lombok.Getter;
+
+@Getter
 public class TwoShare extends Room {
 
     private List<Person> personList = new ArrayList<Person>(2);
@@ -24,30 +30,6 @@ public class TwoShare extends Room {
         this.roomNo = roomNo;
         this.windowNo = windowNo;
         this.hasAC = true;
-    }
-
-    public List<Person> getPersonList() {
-        return personList;
-    }
-
-    public Washroom getWashroom() {
-        return washroom;
-    }
-
-    public boolean isHasAC() {
-        return hasAC;
-    }
-
-    public int getFloorNo() {
-        return floorNo;
-    }
-
-    public int getRoomNo() {
-        return roomNo;
-    }
-
-    public int getWindowNo() {
-        return windowNo;
     }
 
     public boolean addPerson(Person p){

@@ -1,7 +1,13 @@
-package com.example.pg;
+package com.example.pg.person;
 
 import java.util.List;
-//hi how are you
+
+import com.example.pg.instrument.Instrument;
+import com.example.pg.instrument.InstrumentInterface;
+
+import lombok.Getter;
+
+@Getter
 public class Cheif extends Person implements ChefInterface, InstrumentInterface {
 
     private final String name;
@@ -17,26 +23,6 @@ public class Cheif extends Person implements ChefInterface, InstrumentInterface 
         this.adhaarNo = adhaarNo;
         this.phNo = phNo;
         this.email = email;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getDob() {
-        return dob;
-    }
-
-    public String getAdhaarNo() {
-        return adhaarNo;
-    }
-
-    public String getPhNo() {
-        return phNo;
-    }
-
-    public String getEmail() {
-        return email;
     }
 
     public boolean askRepair(List<Instrument> repairList,Instrument instrument){

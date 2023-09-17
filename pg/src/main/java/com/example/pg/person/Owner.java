@@ -1,8 +1,18 @@
-package com.example.pg;
+package com.example.pg.person;
 
 import java.util.HashMap;
 import java.util.List;
 
+import com.example.pg.instrument.Instrument;
+import com.example.pg.instrument.InstrumentInterface;
+import com.example.pg.room.KitchenRoom;
+import com.example.pg.room.Washroom;
+import com.example.pg.room.Room;
+import com.example.pg.room.TwoShare;
+
+import lombok.Getter;
+
+@Getter
 public class Owner extends Person implements OwnerInterface, InstrumentInterface{
 
     private final String name;
@@ -21,25 +31,6 @@ public class Owner extends Person implements OwnerInterface, InstrumentInterface
         this.email = email;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getDob() {
-        return dob;
-    }
-
-    public String getAdhaarNo() {
-        return adhaarNo;
-    }
-
-    public String getPhNo() {
-        return phNo;
-    }
-
-    public String getEmail() {
-        return email;
-    }
 
     public boolean askRepair(List<Instrument> repairList,Instrument instrument){
         repairList.add(instrument);

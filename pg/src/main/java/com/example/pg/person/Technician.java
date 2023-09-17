@@ -1,6 +1,8 @@
-package com.example.pg;
+package com.example.pg.person;
 
 import java.util.List;
+
+import com.example.pg.instrument.Instrument;
 
 public class Technician extends Person {
 

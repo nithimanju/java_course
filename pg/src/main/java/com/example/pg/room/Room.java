@@ -1,5 +1,8 @@
-package com.example.pg;
+package com.example.pg.room;
 
+import lombok.Getter;
+
+@Getter
 public abstract class Room {
     private final int floorNo;
     private final int roomNo;
@@ -10,14 +13,5 @@ public abstract class Room {
         this.roomNo = roomNo;
         this.windowNo = windowNo;
     }
-
-    public int getFloorNo() {
-        return floorNo;
-    }
-    public int getRoomNo() {
-        return roomNo;
-    }
-    public int getWindowNo() {
-        return windowNo;
-    }   
+  
 }

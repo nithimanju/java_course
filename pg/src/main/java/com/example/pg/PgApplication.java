@@ -3,6 +3,13 @@ package com.example.pg;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.example.pg.instrument.Instrument;
+import com.example.pg.person.Owner;
+import com.example.pg.person.Person;
+import com.example.pg.room.KitchenRoom;
+import com.example.pg.room.Room;
+import com.example.pg.room.TwoShare;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
